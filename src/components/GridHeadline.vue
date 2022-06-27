@@ -28,6 +28,12 @@ const props = defineProps({
     type: String,
     default: "section",
   },
+  hideButton: {
+    type: Boolean
+  },
+  hasGradientBar: {
+    type: Boolean
+  }
 });
 
 const assetFolder = route.name;
@@ -48,8 +54,8 @@ const imgUrl = new URL(
       <h1 class="text-xl font-bold uppercase mb-4">{{ title }}</h1>
       <slot name="author"></slot>
       <p class="opacity-60 mb-6">{{ body }}</p>
-      <ArrowButton :is-inverted="isDark">{{ buttonTitle }}</ArrowButton>
-      <slot></slot>
+      <ArrowButton :is-inverted="isDark" v-if="!hideButton">{{ buttonTitle }}</ArrowButton>
+      <div class="absolute top-0 h-[.375rem] w-1/3 gradient-accent" v-if="hasGradientBar"></div>
     </div>
   </component>
 </template>

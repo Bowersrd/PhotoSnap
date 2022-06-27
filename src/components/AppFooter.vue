@@ -18,24 +18,20 @@ const socialMedia = ref([
       <SvgIcon name="logo" is-dark></SvgIcon>
     </div>
     <div class="flex gap-3 justify-center mb-12">
-      <SvgIcon
-        v-for="media in socialMedia"
-        :key="media"
-        :name="media"
-      ></SvgIcon>
+      <SvgIcon v-for="media in socialMedia" :key="media" :name="media"></SvgIcon>
     </div>
     <ul class="text-white text-xs uppercase grid gap-5 mb-28">
       <li>
         <router-link to="/">Home</router-link>
       </li>
       <li>
-        <router-link to="/">Stories</router-link>
+        <router-link to="/stories">Stories</router-link>
       </li>
       <li>
-        <router-link to="/">Features</router-link>
+        <router-link to="/features">Features</router-link>
       </li>
       <li>
-        <router-link to="/">Pricing</router-link>
+        <router-link to="/pricing">Pricing</router-link>
       </li>
     </ul>
     <ArrowButton class="mb-8 mx-auto" is-inverted>Get an invite</ArrowButton>
