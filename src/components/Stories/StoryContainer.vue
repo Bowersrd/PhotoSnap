@@ -4,9 +4,9 @@ import StoryCard from "@/components/Stories/StoryCard.vue";
 
 const props = defineProps({
   isFeatured: {
-    type: Boolean
-  }
-})
+    type: Boolean,
+  },
+});
 
 const stories = ref([
   {
@@ -163,8 +163,15 @@ const visibleStories = props.isFeatured ? stories.value.slice(0, 4) : stories;
 
 <template>
   <section>
-    <StoryCard v-for="story in visibleStories" :key="story.title" :title="story.title" :author="story.author"
-      :image="story.image" :published="story.published" :isFeatured="isFeatured">
+    <StoryCard
+      v-for="story in visibleStories"
+      :key="story.title"
+      :title="story.title"
+      :author="story.author"
+      :image="story.image"
+      :published="story.published"
+      :is-featured="isFeatured"
+    >
     </StoryCard>
   </section>
 </template>

@@ -12,15 +12,17 @@ const props = defineProps({
   },
   published: {
     type: String,
-    default: ""
+    default: "",
   },
   image: {
     type: Object,
-    default: {},
+    default() {
+      return {};
+    },
   },
   isFeatured: {
-    type: Boolean
-  }
+    type: Boolean,
+  },
 });
 
 const imgUrl = new URL(
@@ -31,11 +33,13 @@ const imgUrl = new URL(
 
 <template>
   <div class="relative w-full">
-    <div class="w-full after:w-full after:h-full after:gradient-black after:absolute after:inset-0">
+    <div
+      class="w-full after:w-full after:h-full after:gradient-black after:absolute after:inset-0"
+    >
       <img class="w-full" :src="imgUrl" :alt="image.alt" />
     </div>
     <div class="w-full absolute bottom-10 z-10 text-white px-8">
-      <p class="text-sm" v-if="published && !isFeatured">{{ published }}</p>
+      <p v-if="published && !isFeatured" class="text-sm">{{ published }}</p>
       <h2 class="text-md font-bold">{{ title }}</h2>
       <p class="text-sm">by {{ author }}</p>
       <div class="w-full h-[1px] bg-white mt-4 mb-5 opacity-25"></div>

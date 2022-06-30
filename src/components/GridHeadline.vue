@@ -1,8 +1,8 @@
 <script setup>
-import { useRoute } from 'vue-router'
+import { useRoute } from "vue-router";
 import ArrowButton from "@/components/Buttons/ArrowButton.vue";
 
-const route = useRoute()
+const route = useRoute();
 
 const props = defineProps({
   image: {
@@ -29,11 +29,11 @@ const props = defineProps({
     default: "section",
   },
   hideButton: {
-    type: Boolean
+    type: Boolean,
   },
   hasGradientBar: {
-    type: Boolean
-  }
+    type: Boolean,
+  },
 });
 
 const assetFolder = route.name;
@@ -49,13 +49,21 @@ const imgUrl = new URL(
     <div class="w-full">
       <img class="w-full" :src="imgUrl" alt="" />
     </div>
-    <div class="relative py-[4.5rem] px-8" :class="isDark ? 'text-white' : 'text-black'">
+    <div
+      class="relative py-[4.5rem] px-8"
+      :class="isDark ? 'text-white' : 'text-black'"
+    >
       <slot name="featured"></slot>
       <h1 class="text-xl font-bold uppercase mb-4">{{ title }}</h1>
       <slot name="author"></slot>
       <p class="opacity-60 mb-6">{{ body }}</p>
-      <ArrowButton :is-inverted="isDark" v-if="!hideButton">{{ buttonTitle }}</ArrowButton>
-      <div class="absolute top-0 h-[.375rem] w-1/3 gradient-accent" v-if="hasGradientBar"></div>
+      <ArrowButton v-if="!hideButton" :is-inverted="isDark">{{
+        buttonTitle
+      }}</ArrowButton>
+      <div
+        v-if="hasGradientBar"
+        class="absolute top-0 h-[.375rem] w-1/3 gradient-accent"
+      ></div>
     </div>
   </component>
 </template>

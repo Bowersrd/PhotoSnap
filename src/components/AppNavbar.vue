@@ -13,7 +13,7 @@ const isMobileActive = ref(false);
     >
       <div>
         <SvgIcon
-          name="logo"
+          name="Logo"
           @click="$router.push('/'), (isMobileActive = false)"
         ></SvgIcon>
       </div>

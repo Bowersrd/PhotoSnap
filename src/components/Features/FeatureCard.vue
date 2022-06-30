@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps({
+defineProps({
   title: {
     type: String,
     default: "",
@@ -13,11 +13,6 @@ const props = defineProps({
     default: "",
   },
 });
-
-const imgUrl = new URL(
-  `../../assets/images/features/desktop/${props.icon}`,
-  import.meta.url
-).href;
 </script>
 
 <template>

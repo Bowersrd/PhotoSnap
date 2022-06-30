@@ -13,7 +13,7 @@ const props = defineProps({
 });
 
 const dynamicComponent = computed(() => {
-  return defineAsyncComponent(() => import(`./icons/${props.name}.vue`));
+  return defineAsyncComponent(() => import(`./icons/${props.name}Icon.vue`));
 });
 </script>
 

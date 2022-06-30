@@ -4,21 +4,25 @@ import SvgIcon from "./SvgIcon.vue";
 import ArrowButton from "./Buttons/ArrowButton.vue";
 
 const socialMedia = ref([
-  "media/facebook",
-  "media/youtube",
-  "media/twitter",
-  "media/pinterest",
-  "media/instagram",
+  "media/Facebook",
+  "media/Youtube",
+  "media/Twitter",
+  "media/Pinterest",
+  "media/Instagram",
 ]);
 </script>
 
 <template>
   <footer class="bg-black text-center grid py-14">
     <div class="mb-8 mx-auto">
-      <SvgIcon name="logo" is-dark></SvgIcon>
+      <SvgIcon name="Logo" is-dark></SvgIcon>
     </div>
     <div class="flex gap-3 justify-center mb-12">
-      <SvgIcon v-for="media in socialMedia" :key="media" :name="media"></SvgIcon>
+      <SvgIcon
+        v-for="media in socialMedia"
+        :key="media"
+        :name="media"
+      ></SvgIcon>
     </div>
     <ul class="text-white text-xs uppercase grid gap-5 mb-28">
       <li>

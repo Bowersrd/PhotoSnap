@@ -10,14 +10,20 @@ defineProps({
 </script>
 
 <template>
-  <button class="flex uppercase text-xs font-bold" :class="
-    [isInverted ? 'text-white' : 'text-black'],
-    { 'w-full justify-between': isFullWidth }
-  ">
-    <span class="border-b border-[transparent]" :class="[
-      spacing,
-      isInverted ? 'hover:border-white' : 'hover:border-black',
-    ]">
+  <button
+    class="flex uppercase text-xs font-bold"
+    :class="
+      ([isInverted ? 'text-white' : 'text-black'],
+      { 'w-full justify-between': isFullWidth })
+    "
+  >
+    <span
+      class="border-b border-[transparent]"
+      :class="[
+        spacing,
+        isInverted ? 'hover:border-white' : 'hover:border-black',
+      ]"
+    >
       <slot></slot>
     </span>
     <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
