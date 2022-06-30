@@ -10,7 +10,7 @@ const paymentChoice = ref("monthly");
 
 const updatePaymentChoice = (toggled) => {
   if (toggled) {
-    paymentChoice.value = "yearly";
+    paymentChoice.value = "annual";
   } else {
     paymentChoice.value = "monthly";
   }
@@ -20,21 +20,24 @@ const plans = [
   {
     title: "Basic",
     body: "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
-    price: "19.00",
+    monthlyPrice: "19.00",
+    annualPrice: "190.00",
     isDark: false,
     isFeatured: false,
   },
   {
     title: "Pro",
     body: "More advanced features available. Recommended for photography veterans and professionals.",
-    price: "39.00",
+    monthlyPrice: "39.00",
+    annualPrice: "390.00",
     isDark: true,
     isFeatured: true,
   },
   {
     title: "Business",
     body: "Additional features available such as more detailed metrics. Recommended for business owners.",
-    price: "99.00",
+    monthlyPrice: "99.00",
+    annualPrice: "990.00",
     isDark: false,
     isFeatured: false,
   },
@@ -108,7 +111,7 @@ const features = [
         :key="plan.title"
         :title="plan.title"
         :body="plan.body"
-        :price="plan.price"
+        :price="plan[`${paymentChoice}Price`]"
         :is-dark="plan.isDark"
         :is-featured="plan.isFeatured"
       ></PricingCard>
