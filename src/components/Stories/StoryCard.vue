@@ -25,8 +25,12 @@ const props = defineProps({
   },
 });
 
-const imgUrl = new URL(
+const mobileImage = new URL(
   `../../assets/images/stories/mobile/${props.image.name}`,
+  import.meta.url
+).href;
+const tabletUpImage = new URL(
+  `../../assets/images/stories/desktop/${props.image.name}`,
   import.meta.url
 ).href;
 </script>
@@ -34,9 +38,16 @@ const imgUrl = new URL(
 <template>
   <div class="relative w-full">
     <div
-      class="w-full after:w-full after:h-full after:gradient-black after:absolute after:inset-0"
+      class="w-full overflow-hidden after:w-full after:h-full after:gradient-black after:absolute after:inset-0 md:max-h-[500px]"
     >
-      <img class="w-full" :src="imgUrl" :alt="image.alt" />
+      <picture>
+        <source media="(min-width:768px)" :srcset="tabletUpImage" />
+        <img
+          :src="mobileImage"
+          alt="Flowers"
+          class="w-full md:relative md:bottom-5"
+        />
+      </picture>
     </div>
     <div class="w-full absolute bottom-10 z-10 text-white px-8">
       <p v-if="published && !isFeatured" class="text-sm">{{ published }}</p>

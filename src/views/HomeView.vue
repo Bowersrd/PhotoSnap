@@ -13,6 +13,7 @@ import FeaturesContainer from "@/components/Features/FeaturesContainer.vue";
       title="Beautiful stories every time"
       body="We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone."
       button-title="View the stories"
+      is-flipped
     ></GridHeadline>
     <GridHeadline
       image="designed-for-everyone.jpg"

@@ -89,7 +89,7 @@ const features = [
     hide-button
     has-gradient-bar
   ></GridHeadline>
-  <main class="pt-16 px-7">
+  <main class="pt-16">
     <div class="mb-10 flex justify-center items-center">
       <p
         class="text-md mr-8"
@@ -105,7 +105,7 @@ const features = [
         Yearly
       </p>
     </div>
-    <div class="grid gap-6 mb-16">
+    <section class="grid gap-6 mb-16 px-7">
       <PricingCard
         v-for="plan in plans"
         :key="plan.title"
@@ -115,12 +115,14 @@ const features = [
         :is-dark="plan.isDark"
         :is-featured="plan.isFeatured"
       ></PricingCard>
-    </div>
-    <PricingFeatureGrid
-      class="mb-16"
-      title="The Features"
-      :features="features"
-    ></PricingFeatureGrid>
+    </section>
+    <section class="px-7">
+      <PricingFeatureGrid
+        class="mb-16"
+        title="The Features"
+        :features="features"
+      ></PricingFeatureGrid>
+    </section>
+    <JoinBeta></JoinBeta>
   </main>
-  <JoinBeta></JoinBeta>
 </template>

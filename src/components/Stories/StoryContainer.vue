@@ -162,7 +162,7 @@ const visibleStories = props.isFeatured ? stories.value.slice(0, 4) : stories;
 </script>
 
 <template>
-  <section>
+  <section class="grid md:grid-cols-2">
     <StoryCard
       v-for="story in visibleStories"
       :key="story.title"
