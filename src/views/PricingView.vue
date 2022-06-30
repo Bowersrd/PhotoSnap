@@ -3,6 +3,8 @@ import { ref } from "vue";
 import GridHeadline from "../components/GridHeadline.vue";
 import ToggleSwitch from "../components/Buttons/ToggleSwitch.vue";
 import PricingCard from "../components/Pricing/PricingCard.vue";
+import PricingFeatureGrid from "../components/Pricing/PricingFeatureGrid.vue";
+import JoinBeta from "../components/JoinBeta.vue";
 
 const paymentChoice = ref("monthly");
 
@@ -37,6 +39,41 @@ const plans = [
     isFeatured: false,
   },
 ];
+
+const features = [
+  {
+    title: "Unlimited Story Posting",
+    includedPlans: ["basic", "pro", "business"],
+  },
+  {
+    title: "Unlimited Photo Upload",
+    includedPlans: ["basic", "pro", "business"],
+  },
+  {
+    title: "Embedding Custom Content",
+    includedPlans: ["pro", "business"],
+  },
+  {
+    title: "Customize Metadata",
+    includedPlans: ["pro", "business"],
+  },
+  {
+    title: "Advanced Metrics",
+    includedPlans: ["business"],
+  },
+  {
+    title: "Photo Downloads",
+    includedPlans: ["business"],
+  },
+  {
+    title: "Search Engine Indexing",
+    includedPlans: ["business"],
+  },
+  {
+    title: "Custom Analytics",
+    includedPlans: ["business"],
+  },
+];
 </script>
 
 <template>
@@ -49,7 +86,7 @@ const plans = [
     hide-button
     has-gradient-bar
   ></GridHeadline>
-  <main class="pt-16">
+  <main class="pt-16 px-7">
     <div class="mb-10 flex justify-center items-center">
       <p
         class="text-md mr-8"
@@ -65,7 +102,7 @@ const plans = [
         Yearly
       </p>
     </div>
-    <div class="grid gap-6 px-7">
+    <div class="grid gap-6 mb-16">
       <PricingCard
         v-for="plan in plans"
         :key="plan.title"
@@ -76,5 +113,11 @@ const plans = [
         :is-featured="plan.isFeatured"
       ></PricingCard>
     </div>
+    <PricingFeatureGrid
+      class="mb-16"
+      title="The Features"
+      :features="features"
+    ></PricingFeatureGrid>
   </main>
+  <JoinBeta></JoinBeta>
 </template>

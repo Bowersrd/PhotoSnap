@@ -12,10 +12,10 @@ defineProps({
 <template>
   <button
     class="flex uppercase text-xs font-bold"
-    :class="
-      ([isInverted ? 'text-white' : 'text-black'],
-      { 'w-full justify-between': isFullWidth })
-    "
+    :class="[
+      isInverted ? 'text-white' : 'text-black',
+      { 'w-full justify-between': isFullWidth },
+    ]"
   >
     <span
       class="border-b border-[transparent]"
