@@ -31,9 +31,6 @@ const props = defineProps({
   hideButton: {
     type: Boolean,
   },
-  hasGradientBar: {
-    type: Boolean,
-  },
   isFlipped: {
     type: Boolean,
   },
@@ -75,19 +72,14 @@ const desktopImage = new URL(
       class="relative py-[4.5rem] px-8 md:col-span-2 md:flex md:flex-col md:justify-center md:px-12"
       :class="isDark ? 'text-white' : 'text-black'"
     >
-      <slot name="featured"></slot>
       <h1 class="text-xl font-bold uppercase mb-4 md:text-2xl md:mb-5">
         {{ title }}
       </h1>
-      <slot name="author"></slot>
       <p class="opacity-60 mb-6 md:mb-12">{{ body }}</p>
       <ArrowButton v-if="!hideButton" :is-inverted="isDark">{{
         buttonTitle
       }}</ArrowButton>
-      <div
-        v-if="hasGradientBar"
-        class="absolute top-0 h-[.375rem] w-1/3 gradient-accent"
-      ></div>
+      <div class="absolute top-0 h-[.375rem] w-1/3 gradient-accent"></div>
     </div>
   </component>
 </template>

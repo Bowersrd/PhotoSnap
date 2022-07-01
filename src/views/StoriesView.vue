@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import GridHeadline from "../components/GridHeadline.vue";
+import FeaturedStory from "../components/Stories/FeaturedStory.vue";
 import StoryContainer from "../components/Stories/StoryContainer.vue";
 
 const featuredStory = ref({
@@ -14,26 +14,7 @@ const featuredStory = ref({
 </script>
 
 <template>
-  <GridHeadline
-    element-tag="header"
-    :title="featuredStory.title"
-    :body="featuredStory.body"
-    :image="featuredStory.image"
-    :button-title="featuredStory.buttonTitle"
-    is-dark
-  >
-    <template #featured>
-      <p class="text-white text-xs uppercase mb-4">
-        Last month's featured story
-      </p>
-    </template>
-    <template #author>
-      <p class="text-sm mb-6">
-        <span class="opacity-75">{{ featuredStory.published }}</span> by
-        {{ featuredStory.author }}
-      </p>
-    </template>
-  </GridHeadline>
+  <FeaturedStory :featured-story="featuredStory"></FeaturedStory>
   <main>
     <StoryContainer></StoryContainer>
   </main>
