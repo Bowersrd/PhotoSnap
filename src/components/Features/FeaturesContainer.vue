@@ -4,6 +4,10 @@ import FeatureCard from "./FeatureCard.vue";
 import SvgIcon from "../SvgIcon.vue";
 
 const props = defineProps({
+  columns: {
+    type: String,
+    default: "grid-cols-1",
+  },
   isFeatured: {
     type: Boolean,
   },
@@ -48,7 +52,10 @@ const visibleFeatures = props.isFeatured
 </script>
 
 <template>
-  <section class="grid px-8 py-20 text-center gap-14">
+  <section
+    class="grid px-8 py-20 text-center gap-14 md:px-10 md:gap-x-3 md:gap-y-[4.5rem]"
+    :class="`md:${columns}`"
+  >
     <FeatureCard
       v-for="feature in visibleFeatures"
       :key="feature.title"

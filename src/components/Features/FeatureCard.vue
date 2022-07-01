@@ -19,6 +19,6 @@ defineProps({
   <div class="grid place-items-center">
     <slot></slot>
     <h3 class="mt-12 mb-4 text-md font-bold">{{ title }}</h3>
-    <p class="max-w-[45ch]">{{ body }}</p>
+    <p class="max-w-[45ch] opacity-60">{{ body }}</p>
   </div>
 </template>

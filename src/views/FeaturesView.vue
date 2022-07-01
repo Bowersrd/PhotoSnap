@@ -15,7 +15,7 @@ import JoinBeta from "../components/JoinBeta.vue";
     has-gradient-bar
   ></GridHeadline>
   <main>
-    <FeaturesContainer></FeaturesContainer>
+    <FeaturesContainer columns="grid-cols-2"></FeaturesContainer>
     <JoinBeta></JoinBeta>
   </main>
 </template>
