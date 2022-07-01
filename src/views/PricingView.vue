@@ -105,7 +105,7 @@ const features = [
         Yearly
       </p>
     </div>
-    <section class="grid gap-6 mb-16 px-7">
+    <section class="grid gap-6 mb-16 px-7 md:mb-28">
       <PricingCard
         v-for="plan in plans"
         :key="plan.title"
@@ -117,6 +117,11 @@ const features = [
       ></PricingCard>
     </section>
     <section class="px-7">
+      <h3
+        class="hidden text-2xl font-bold uppercase mx-auto w-fit mb-16 md:block"
+      >
+        Compare
+      </h3>
       <PricingFeatureGrid
         class="mb-16"
         title="The Features"

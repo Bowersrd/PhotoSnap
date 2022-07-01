@@ -17,8 +17,19 @@ defineProps({
 
 <template>
   <div class="grid grid-cols-3">
-    <div class="col-span-3 border-b border-black pb-5">
-      <h4 class="uppercase text-xs font-bold">{{ title }}</h4>
+    <div class="col-span-3 border-b border-black pb-5 md:grid md:grid-cols-5">
+      <h4 class="uppercase text-xs font-bold md:col-span-2 md:ml-6">
+        {{ title }}
+      </h4>
+      <h4 class="hidden uppercase text-xs font-bold text-center md:block">
+        Basic
+      </h4>
+      <h4 class="hidden uppercase text-xs font-bold text-center md:block">
+        Pro
+      </h4>
+      <h4 class="hidden uppercase text-xs font-bold text-center md:block">
+        Business
+      </h4>
     </div>
     <PricingGridItem
       v-for="feature in features"
