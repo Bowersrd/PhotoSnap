@@ -28,7 +28,7 @@ const desktopImage = new URL(
   <header class="bg-black text-white md:grid md:items-center">
     <div class="w-full md:row-start-1 md:col-start-1">
       <picture>
-        <source media="(min-width:1024px)" :srcset="desktopImage" />
+        <source media="(min-width:1280px)" :srcset="desktopImage" />
         <source media="(min-width:768px)" :srcset="tabletImage" />
         <img :src="mobileImage" alt="Flowers" class="w-full" />
       </picture>

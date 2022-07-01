@@ -7,9 +7,9 @@ const isMobileActive = ref(false);
 </script>
 
 <template>
-  <nav class="sticky top-0 z-50">
+  <nav class="sticky top-0 z-50 bg-white">
     <div
-      class="flex justify-between items-center w-full h-full bg-white px-6 py-7 md:py-4"
+      class="flex justify-between items-center bg-white px-6 py-7 max-w-6xl mx-auto md:py-4"
     >
       <div>
         <SvgIcon
