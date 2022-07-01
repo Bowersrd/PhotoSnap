@@ -18,5 +18,5 @@ const dynamicComponent = computed(() => {
 </script>
 
 <template>
-  <component :is="dynamicComponent" :is-dark="isDark" />
+  <component :is="dynamicComponent" :is-dark="isDark" class="cursor-pointer" />
 </template>

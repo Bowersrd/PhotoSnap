@@ -89,8 +89,8 @@ const features = [
     hide-button
     has-gradient-bar
   ></GridHeadline>
-  <main class="pt-16">
-    <div class="mb-10 flex justify-center items-center">
+  <main class="pt-28">
+    <div class="mb-10 flex justify-center items-center xl:mb-12">
       <p
         class="text-md mr-8"
         :class="{ 'font-bold': paymentChoice == 'monthly' }"
@@ -105,7 +105,9 @@ const features = [
         Yearly
       </p>
     </div>
-    <section class="grid gap-6 mb-16 px-7 md:mb-28">
+    <section
+      class="grid max-w-6xl mx-auto gap-6 mb-16 px-7 md:mb-28 xl:grid-cols-3 xl:items-center xl:mb-40"
+    >
       <PricingCard
         v-for="plan in plans"
         :key="plan.title"

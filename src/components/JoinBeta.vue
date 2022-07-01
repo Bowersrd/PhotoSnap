@@ -5,9 +5,11 @@ import ArrowButton from "../components/Buttons/ArrowButton.vue";
 <template>
   <section class="relative">
     <div
-      class="w-full bg-[url('./assets/images/shared/mobile/bg-beta.jpg')] bg-cover py-16 px-6 md:bg-[url('./assets/images/shared/tablet/bg-beta.jpg')] md:px-10 md:py-16"
+      class="w-full bg-[url('./assets/images/shared/mobile/bg-beta.jpg')] bg-cover py-16 px-6 md:bg-[url('./assets/images/shared/tablet/bg-beta.jpg')] md:px-10 md:py-16 xl:bg-[url('./assets/images/shared/desktop/bg-beta.jpg')]"
     >
-      <div class="text-white md:grid md:grid-cols-3 md:items-center">
+      <div
+        class="text-white max-w-6xl mx-auto md:grid md:grid-cols-3 md:items-center"
+      >
         <h4
           class="text-xl font-bold uppercase mb-6 md:text-2xl md:col-span-2 md:max-w-sm"
         >

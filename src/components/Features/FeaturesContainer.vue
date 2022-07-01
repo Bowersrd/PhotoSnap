@@ -53,8 +53,8 @@ const visibleFeatures = props.isFeatured
 
 <template>
   <section
-    class="grid px-8 py-20 text-center gap-14 md:px-10 md:gap-x-3 md:gap-y-[4.5rem]"
-    :class="`md:${columns}`"
+    class="grid px-8 py-20 text-center gap-14 max-w-6xl mx-auto md:px-10 md:gap-x-3 md:gap-y-[4.5rem] xl:py-28 xl:gap-x-7 xl:gap-y-28 xl:px-0"
+    :class="`${columns}`"
   >
     <FeatureCard
       v-for="feature in visibleFeatures"

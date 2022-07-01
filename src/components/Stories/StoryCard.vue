@@ -44,8 +44,8 @@ const tabletUpImage = new URL(
         <source media="(min-width:768px)" :srcset="tabletUpImage" />
         <img
           :src="mobileImage"
-          alt="Flowers"
-          class="w-full md:relative md:bottom-5"
+          alt=""
+          class="w-full md:relative md:bottom-5 xl:bottom-0"
         />
       </picture>
     </div>

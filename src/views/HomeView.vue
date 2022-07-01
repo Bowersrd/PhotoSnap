@@ -22,6 +22,6 @@ import FeaturesContainer from "@/components/Features/FeaturesContainer.vue";
       button-title="View the stories"
     ></GridHeadline>
     <StoryContainer is-featured></StoryContainer>
-    <FeaturesContainer is-featured></FeaturesContainer>
+    <FeaturesContainer columns="xl:grid-cols-3" is-featured></FeaturesContainer>
   </main>
 </template>

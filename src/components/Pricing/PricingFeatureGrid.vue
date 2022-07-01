@@ -16,7 +16,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="grid grid-cols-3">
+  <div class="grid grid-cols-3 max-w-3xl mx-auto">
     <div class="col-span-3 border-b border-black pb-5 md:grid md:grid-cols-5">
       <h4 class="uppercase text-xs font-bold md:col-span-2 md:ml-6">
         {{ title }}

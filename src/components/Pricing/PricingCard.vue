@@ -25,11 +25,16 @@ defineProps({
 
 <template>
   <div
-    class="relative w-full pt-14 pb-10 px-8 text-center md:grid md:grid-cols-2 md:text-left md:py-10"
-    :class="isDark ? 'bg-black text-white' : 'bg-gray'"
+    class="relative w-full pt-14 pb-10 px-8 text-center md:grid md:grid-cols-2 md:text-left md:py-10 xl:block xl:text-center xl:px-10 xl:h-min"
+    :class="[
+      isDark ? 'bg-black text-white' : 'bg-gray',
+      isFeatured ? 'xl:pt-20 xl:pb-16' : 'xl:pt-14',
+    ]"
   >
     <h2 class="text-lg font-bold mb-4">{{ title }}</h2>
-    <p class="opacity-60 mb-10 md:col-start-1 md:mb-8 md:max-w-[27ch]">
+    <p
+      class="opacity-60 mb-10 md:col-start-1 md:mb-8 md:max-w-[27ch] xl:mx-auto"
+    >
       {{ body }}
     </p>
     <p
@@ -45,7 +50,7 @@ defineProps({
     >
     <div
       v-if="isFeatured"
-      class="absolute top-0 left-0 h-[.375rem] w-full gradient-accent md:h-full md:w-[6px]"
+      class="absolute top-0 left-0 h-[.375rem] w-full gradient-accent md:h-full md:w-[6px] xl:w-full xl:h-[.375rem]"
     ></div>
   </div>
 </template>

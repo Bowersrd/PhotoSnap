@@ -72,7 +72,7 @@ const desktopImage = new URL(
       </picture>
     </div>
     <div
-      class="relative py-[4.5rem] px-8 md:col-span-2 md:flex md:flex-col md:justify-center md:px-12 xl:items-center xl:px-28"
+      class="relative py-[4.5rem] px-8 md:col-span-2 md:flex md:flex-col md:justify-center md:px-12 xl:px-28"
       :class="[
         isDark ? 'text-white' : 'text-black',
         isFlipped

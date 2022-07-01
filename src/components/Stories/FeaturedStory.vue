@@ -34,19 +34,21 @@ const desktopImage = new URL(
       </picture>
     </div>
     <div
-      class="relative py-[4.5rem] px-8 md:row-start-1 md:col-start-1 md:px-10 max-w-[45ch] md:py-0"
+      class="relative py-[4.5rem] px-8 md:row-start-1 md:col-start-1 md:px-10 md:py-0 xl:pl-28"
     >
       <p class="text-white text-xs uppercase mb-4 md:mb-6">
         Last month's featured story
       </p>
-      <h1 class="text-xl font-bold uppercase mb-4 md:text-2xl">
+      <h1 class="text-xl font-bold uppercase mb-4 md:text-2xl md:max-w-sm">
         {{ featuredStory.title }}
       </h1>
       <p class="text-sm mb-6">
         <span class="opacity-75">{{ featuredStory.published }}</span> by
         {{ featuredStory.author }}
       </p>
-      <p class="opacity-60 mb-6 md:mb-12">{{ featuredStory.body }}</p>
+      <p class="opacity-60 mb-6 md:mb-12 md:max-w-[38ch]">
+        {{ featuredStory.body }}
+      </p>
       <ArrowButton is-inverted>{{ featuredStory.buttonTitle }}</ArrowButton>
     </div>
   </header>
